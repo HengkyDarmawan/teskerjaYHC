@@ -17,7 +17,7 @@
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                        <tr>
+                        <tr style="font-size:12px; text-transform: uppercase;">
                             <th>No</th>
                             <th>Project Name</th>
                             <th>Client</th>
@@ -29,7 +29,7 @@
                         </tr>
                     </thead>
                     <tfoot>
-                        <tr>
+                        <tr style="font-size:12px; text-transform: uppercase;">
                             <th>No</th>
                             <th>Project Name</th>
                             <th>Client</th>
@@ -43,7 +43,7 @@
                     <tbody>
                         <?php $i = 1; ?>
                         <?php foreach ($project as $p) : ?>
-                            <tr>
+                            <tr  style="font-size:12px; text-transform: capitalize;">
                                 <td><?= $i++; ?></td>
                                 <td><?= $p['name'];?></td>
                                 <td><?= $p['client'];?></td>
@@ -55,7 +55,7 @@
                                         <div class="col-md-9" >
                                             <strong><?= $p['project_lead'];?></strong>
                                             <br>
-                                            <p style="font-size:12px"><?= $p['email_lead'];?></p>
+                                            <?= $p['email_lead'];?>
                                         </div>
                                     </div>
                                 </td>

@@ -4,7 +4,7 @@ class M_dashboard extends CI_Model
 {
     public function getAllProject()
     {
-        return $this->db->get('project')->result_array();
+        return $this->db->order_by('id_project', 'desc')->get('project')->result_array();
     }
     public function addProject()
     {
