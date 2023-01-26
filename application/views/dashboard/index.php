@@ -49,18 +49,18 @@
                                 <td><?= $p['client'];?></td>
                                 <td>
                                     <div class="row">
-                                        <div class="col-md-3">
-                                            <img class="img-profile rounded-circle w-100 h-100"  src="<?= base_url('assets/img/profile/') . $p['image_lead'];?>" alt="images" /> 
+                                        <div class="col-md-3" style="max-width:100px;">
+                                            <img class="img-profile rounded-circle w-100 h-90"  src="<?= base_url('assets/img/profile/') . $p['image_lead'];?>" alt="images" /> 
                                         </div>
-                                        <div class="col-md">
-                                            <?= $p['project_lead'];?>
+                                        <div class="col-md-9" >
+                                            <strong><?= $p['project_lead'];?></strong>
                                             <br>
-                                            <?= $p['email_lead'];?>
+                                            <p style="font-size:12px"><?= $p['email_lead'];?></p>
                                         </div>
                                     </div>
                                 </td>
-                                <td><?= $p['start_date'];?></td>
-                                <td><?= $p['end_date'];?></td>
+                                <td><?= mediumdate_indo($p['start_date']);?></td>
+                                <td><?= mediumdate_indo($p['end_date']);?></td>
                                 <td>
                                     <?php
                                     if ($p['progress'] <= "50") { ?>
